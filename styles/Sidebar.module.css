@@ -9,6 +9,37 @@
   height: 100vh;
   overflow-y: auto;
   border-right: 1px solid #e9ecef;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+/* モバイル表示時のスタイル */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* オーバーレイ */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
+  .overlay.visible {
+    display: block;
+  }
 }
 
 .sidebarContent {
