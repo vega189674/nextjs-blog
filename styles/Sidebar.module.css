@@ -67,4 +67,56 @@
 
 .sidebar::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* アーカイブツリーのスタイル */
+.archiveTree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.monthToggle {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.monthToggle:hover {
+  color: #228be6;
+}
+
+.arrow {
+  display: inline-block;
+  width: 20px;
+  font-size: 0.8rem;
+}
+
+.count {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: #868e96;
+}
+
+.postList {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.postList li {
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.postList a {
+  color: #495057;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.postList a:hover {
+  color: #228be6;
 } 
