@@ -7,10 +7,10 @@
       "path": "/misc/calculator"
     },
     {
-      "id": "todo",
-      "title": "TODOリスト",
-      "description": "タスク管理アプリ",
-      "path": "/misc/todo"
+      "id": "BG-strategy-meeting",
+      "title": "方眼軍議",
+      "description": "グリッド式の戦略考察アプリ",
+      "path": "/misc/BG_strategy_meeting"
     }
   ]
 } 
