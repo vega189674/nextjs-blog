@@ -29,3 +29,26 @@
   min-height: calc(100vh - 200px); /* ビューポートの高さから余白を引いた値 */
   overflow-y: auto;
 }
+
+/* モバイル表示時のスタイル */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+    margin: 1rem auto 3rem;
+  }
+
+  .contentArea {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mainContent {
+    gap: 0;
+  }
+
+  /* ヘッダーの余白調整 */
+  .header {
+    margin-top: 4rem; /* メニューボタンの高さ分を確保 */
+  }
+}

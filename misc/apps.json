@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "id": "calculator",
+      "title": "電卓アプリ",
+      "description": "シンプルな計算機アプリ",
+      "path": "/misc/calculator"
+    },
+    {
+      "id": "todo",
+      "title": "TODOリスト",
+      "description": "タスク管理アプリ",
+      "path": "/misc/todo"
+    }
+  ]
+} 

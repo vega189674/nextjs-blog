@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Sidebar from './Sidebar';
  
-const name = 'Vega Wist';
+const name = 'Temma Ito';
 export const siteTitle = 'Next.js Sample Website';
  
 export default function Layout({ children, home }) {
