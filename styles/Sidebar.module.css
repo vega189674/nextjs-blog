@@ -119,4 +119,48 @@
 
 .postList a:hover {
   color: #228be6;
+}
+
+/* カテゴリーツリーのスタイル */
+.categoryTree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categoryTree li {
+  padding: 0.5rem 0;
+  color: #495057;
+}
+
+.categoryToggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.categoryToggle:hover {
+  color: #228be6;
+}
+
+.appList {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.appList li {
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.appList a {
+  color: #495057;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.appList a:hover {
+  color: #228be6;
 } 

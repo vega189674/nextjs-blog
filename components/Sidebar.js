@@ -5,12 +5,21 @@ import Link from 'next/link';
 export default function Sidebar() {
   const [archiveData, setArchiveData] = useState({});
   const [expandedMonths, setExpandedMonths] = useState({});
+  const [appsData, setAppsData] = useState([]);
+  const [isHobbyExpanded, setIsHobbyExpanded] = useState(false);
 
   useEffect(() => {
+    // アーカイブデータの取得
     fetch('/api/archive')
       .then(response => response.json())
       .then(data => setArchiveData(data))
       .catch(error => console.error('アーカイブデータの取得に失敗しました:', error));
+
+    // WEBアプリデータの取得
+    fetch('/api/apps')
+      .then(response => response.json())
+      .then(data => setAppsData(data))
+      .catch(error => console.error('アプリデータの取得に失敗しました:', error));
   }, []);
 
   const toggleMonth = (month) => {
@@ -27,10 +36,31 @@ export default function Sidebar() {
         <p>ブログ作成者の紹介文をここに記載します。</p>
         
         <h3>カテゴリー</h3>
-        <ul>
+        <ul className={styles.categoryTree}>
           <li>技術記事</li>
           <li>日記</li>
-          <li>趣味</li>
+          <li>
+            <div 
+              className={styles.categoryToggle}
+              onClick={() => setIsHobbyExpanded(!isHobbyExpanded)}
+            >
+              <span className={styles.arrow}>
+                {isHobbyExpanded ? '▼' : '▶'}
+              </span>
+              趣味
+            </div>
+            {isHobbyExpanded && (
+              <ul className={styles.appList}>
+                {appsData.map(app => (
+                  <li key={app.id}>
+                    <Link href={app.path}>
+                      {app.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
         </ul>
 
         <h3>アーカイブ</h3>
